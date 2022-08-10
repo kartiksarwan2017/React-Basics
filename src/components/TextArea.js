@@ -2,9 +2,17 @@ import React, {useState} from 'react';
 
 export default function TextArea(props){
 
+
+
     const handleUpClick = () => {
         console.log("UpperCase was clicked" + text);
         let newText = text.toUpperCase();
+        setText(newText); 
+    }
+
+    const handleLowClick = () => {
+        console.log("UpperCase was clicked" + text);
+        let newText = text.toLowerCase();
         setText(newText); 
     }
 
@@ -12,9 +20,13 @@ export default function TextArea(props){
         console.log("Click to uppercase");
         setText(e.target.value);
     }
+
+    
+
+    const [text, setText] = useState("Enter Your Text Here");
     
     
-    const {text, setText} = useState("Enter Your Text Here");
+  
 
     return (
 
@@ -26,6 +38,8 @@ export default function TextArea(props){
             </div>
 
 
+            <button className="btn btn-primary" onClick={handleLowClick}>Convert LowerCase</button>
+            &nbsp; &nbsp;
             <button className="btn btn-primary" onClick={handleUpClick}>Convert Uppercase</button>
         </div>
     );
