@@ -1,4 +1,5 @@
 import '../App.css';
+import Navbar from './Navbar';
 
 
 // const Name = "Thor";
@@ -20,6 +21,8 @@ function App() {
     <h2> Hello {nameFormat(user)}, How are You? </h2>
     Hello World
     <p className= "nature">Nature in broadest sense is a physical world or universe.</p> */}
+
+    <Navbar title="TextUtils2" about ="AboutTextUtils"/>
 
     </>
 
