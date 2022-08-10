@@ -1,5 +1,6 @@
 import '../App.css';
 import Navbar from './Navbar';
+import TextArea from './TextArea';
 
 
 // const Name = "Thor";
@@ -23,6 +24,8 @@ function App() {
     <p className= "nature">Nature in broadest sense is a physical world or universe.</p> */}
 
     <Navbar title="TextUtils2" about ="AboutTextUtils"/>
+
+    <TextArea heading="Enter Your Text to analyze"/>
 
     </>
 
