@@ -1,6 +1,12 @@
 import '../App.css';
+import About from './About';
 import Navbar from './Navbar';
 import TextArea from './TextArea';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+}from "react-router-dom";
 
 
 // const Name = "Thor";
@@ -23,9 +29,22 @@ function App() {
     Hello World
     <p className= "nature">Nature in broadest sense is a physical world or universe.</p> */}
 
-    <Navbar title="TextUtils2" about ="AboutTextUtils"/>
+    <Navbar title="TextUtils" about ="AboutTextUtils"/>
 
-    <TextArea heading="Enter Your Text to analyze"/>
+
+    <Router>
+    <Routes>
+      <Route path="/about">
+         <About/>
+      </Route>
+
+      <Route path="/">
+          <div className="container my-3">
+              <TextArea heading="Enter Your Text to analyze"/>
+          </div>
+      </Route>
+    </Routes>
+    </Router>
 
     </>
 
