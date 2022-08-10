@@ -30,17 +30,26 @@ export default function TextArea(props){
 
     return (
 
-        <div>
+        <>
             <h1>{props.heading}</h1>
             <div className="mb-3">
                 <textarea value= {text} onChange={handleOnChange} className="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
 
+                <br></br>
+                <button className="btn btn-outline-primary my-2 mx-2" onClick={handleUpClick}>Convert Uppercase</button>
+                <button className="btn btn-outline-secondary my-2 mx-2" onClick={handleLowClick}>Convert Lowercase</button>
+
             </div>
 
 
-            <button className="btn btn-primary" onClick={handleLowClick}>Convert LowerCase</button>
-            &nbsp; &nbsp;
-            <button className="btn btn-primary" onClick={handleUpClick}>Convert Uppercase</button>
+        <div className="container">
+
+            <p> {text.split(" ").length} words and {text.length} characters</p>
+            <p> {0.008 * text.split(" ").length} Minutes read</p>
+            <h1>Preview</h1>
+               <p> {text} </p>
         </div>
+
+        </>
     );
 }
