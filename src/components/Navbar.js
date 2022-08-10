@@ -1,7 +1,7 @@
 import '../Navbar.css';
 import Logo from '../assets/images/social-logo.jpg';
 
-const name = "Thor";
+// const name = "Thor";
 
 function Navbar(){
     return(
@@ -39,8 +39,8 @@ function Navbar(){
         </div>
 
 
-        <h1>Hello {name}, How are you?</h1>
-        <p>This is Navbar Please Use it.</p>
+        {/* <h1>Hello {name}, How are you?</h1>
+        <p>This is Navbar Please Use it.</p> */}
 
         </>
     )
